@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root{
+    --primary-bg-color: #121212;
+    --secondary-color: #D9D9D9;
+    --primary-text-color: #ffffff;
+    --compliment-color: #0099FF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*outline: 1px dashed var(--primary-text-color);*/
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+.login-page{
+    width: 100%;
+    height: 100%;
+    background: var(--primary-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-page form{
+    width: 25%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    font-family: "Fira Code", monospace;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 3em 2em;
+    border: 1px solid var(--compliment-color);
+    backdrop-filter: blur(10px);    /* background blur */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.login-page form p{
+    font-size: 0.8em;
+}
+
+.login-page form .login-greet{
+    width: 100%;
+    height: auto;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.user-in{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0.5em;
+}
+
+.user-in label{
+    color: var(--compliment-color);
+}
+
+.email-in input{
+    width: 100%;
+    height: 3em;
+    color: var(--primary-text-color);
+    background: transparent;
+    border: 1px solid var(--compliment-color);
+    border-radius: 0.2em;
+    padding: 1em;
+}
+
+
+.pass-in input{
+    width: 100%;
+    height: 3em;
+    color: var(--primary-text-color);
+    background: transparent;
+    border: 1px solid var(--compliment-color);
+    border-radius: 0.2em;
+    padding: 1em;
+}
+
+.login-page form .forgot-pass{
+    width: 100%;
+}
+
+
+.forgot-pass a{
+    font-size: 0.8em;
+    font-style: none;
+    color: var(--primary-text-color);
+}
+
+.login-page form button{
+    all: unset;
+    width: 100%;
+    height: 2.5em;
+    font-size: 0.9em;
+    text-align: center;
+    background: var(--compliment-color);
+    color: var(--primary-text-color);
+    border-radius: 0.2em;
+    padding: 0.3em 0;
+    cursor: pointer;
+}
+
+.login-page form .signup-link a{
+    font-style: none;
+    color: var(--primary-text-color);
+}
+
+
+/*SIGN UP PAGE STYLING*/
+
+.signup-page{
+    width: 100%;
+    height: 100%;
+    background: var(--primary-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.signup-page form{
+    width: 25%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    font-family: "Fira Code", monospace;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 3em 2em;
+    border: 1px solid var(--compliment-color);
+    backdrop-filter: blur(10px);    /* background blur */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.signup-page form p{
+    font-size: 0.8em;
+}
+
+.signup-page form .login-greet{
+    width: 100%;
+    height: auto;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+
+.username-in input{
+    width: 100%;
+    height: 3em;
+    color: var(--primary-text-color);
+    background: transparent;
+    border: 1px solid var(--compliment-color);
+    border-radius: 0.2em;
+    padding: 1em;
+}
+
+
+.confirmpass-in input{
+    width: 100%;
+    height: 3em;
+    color: var(--primary-text-color);
+    background: transparent;
+    border: 1px solid var(--compliment-color);
+    border-radius: 0.2em;
+    padding: 1em;
+}
+
+.agree-terms{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.signup-page form .agree-terms p{
+    font-size: 0.6em;
+}
+
+.signup-page form button{
+    all: unset;
+    width: 100%;
+    height: 2.5em;
+    font-size: 0.9em;
+    text-align: center;
+    background: var(--compliment-color);
+    color: var(--primary-text-color);
+    border-radius: 0.2em;
+    padding: 0.3em 0;
+    cursor: pointer;
+}
+
+.signup-page form .signup-link a{
+    font-style: none;
+    color: var(--primary-text-color);
+}
+
+.login-link a{
+    font-style: none;
+    color: var(--primary-text-color);
+}
+
+
+/*FORGOT PASSWORD PAGE STYLING*/
+.forgotpass-page{
+    width: 100%;
+    height: 100%;
+    background: var(--primary-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.forgotpass-page form{
+    width: 25%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    font-family: "Fira Code", monospace;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 3em 2em;
+    border: 1px solid var(--compliment-color);
+    backdrop-filter: blur(10px);    /* background blur */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+
+.forgotpass-page form p{
+    font-size: 0.8em;
+}
+
+.forgotpass-page form .forgotpass-greet{
+    width: 100%;
+    height: auto;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.forgotpass-greet h1{
+    width: 100%;
+    text-align: center;
+}
+
+.forgotpass-page form button{
+    all: unset;
+    width: 100%;
+    height: 2.5em;
+    font-size: 0.9em;
+    text-align: center;
+    background: var(--compliment-color);
+    color: var(--primary-text-color);
+    border-radius: 0.2em;
+    padding: 0.3em 0;
+    cursor: pointer;
+}
+
+.forgotpass-page form .forgotpass-link a{
+    font-style: none;
+    color: var(--primary-text-color);
+}
+
+
+@media (max-width: 395px){
+    .login-page form{
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 3em 2em;
+    border: none;
+    backdrop-filter: unset;    /* background blur */
+    -webkit-backdrop-filter: blur(0);
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+    .login-page form h1{
+        display: none;
+    }
+
+    .login-page form .brand-name{
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+    .signup-page form{
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 3em 2em;
+    border: none;
+    backdrop-filter: unset;    /* background blur */
+    -webkit-backdrop-filter: blur(0);
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+    .signup-page form h1{
+        display: none;
+    }
+
+    .signup-page form .brand-name{
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+    .forgotpass-page form{
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 3em 2em;
+    border: none;
+    backdrop-filter: unset;    /* background blur */
+    -webkit-backdrop-filter: blur(0);
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+    .forgotpass-page form h1{
+        display: none;
+    }
+
+    .forgotpass-page form .brand-name{
+        font-size: 2em;
+        font-weight: 500;
+    }
+}
