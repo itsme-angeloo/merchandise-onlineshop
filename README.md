@@ -24,7 +24,8 @@ This project is **not hosted online** — it is designed to be run locally using
 
 ---
 
-## ⚙️ Local Setup (XAMPP/WAMP)
-1. Download or clone this repo.  
+## ⚙️ Local Setup (LARAGON)
+1. Download or clone this repo.
+   <img width="" src="" >  
    ```bash
    git clone https://github.com/itsme-angeloo/merchandise-onlineshop.git
