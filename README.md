@@ -1,15 +1,30 @@
-# merchandise-onlineshop
-A simple PHP-based online merchandise shop featuring category filtering, responsive product grid layout, and dynamic product management. Built with HTML, CSS, PHP, and MySQL, this project simulates a basic e-commerce storefront for showcasing and managing apparel, drinkware, and accessories. It also includes a password recovery system using SMTP email via PHPMailer.
-Category-based product filtering (Apparel, Drinkware, Accessories)
+# Merchandise Online Shop 🛒
+A simple **PHP-based online merchandise shop** featuring category filtering, responsive product grid layout, and dynamic product management.  
 
-Responsive product grid layout (CSS Grid/Flexbox)
+This project is **not hosted online** — it is designed to be run locally using Laragon with PHP and MySQL.  
 
-Product image path storage in database (no file BLOBs)
+---
 
-Add-to-Cart and Buy Now button structure (front-end-ready)
+## 🚀 Features
+- **Category Filtering** – Browse products by Apparel, Drinkware, or Accessories.  
+- **Responsive Layout** – Product grid adapts using CSS Grid & Flexbox.  
+- **Database-driven Content** – Product image paths stored in MySQL (no BLOBs).  
+- **Shopping Actions** – Add-to-Cart & Buy Now button structure (front-end ready).  
+- **Password Recovery** – Secure tokenized email reset with PHPMailer (SMTP).  
+- **Scalable Structure** – Organized folders for real-world deployment.  
+- **Product Management** – Supports manual uploads & database content handling.  
 
-Forgot Password functionality with tokenized email reset via PHPMailer (SMTP)
+---
 
-Organized and scalable folder structure (for real-world deployment)
+## 🛠 Tech Stack
+- **Frontend:** HTML, CSS (Grid/Flexbox)  
+- **Backend:** PHP  
+- **Database:** MySQL  
+- **Email Service:** PHPMailer (SMTP for password reset)  
 
-Basic product data management (manual uploads & DB-driven content)
+---
+
+## ⚙️ Local Setup (XAMPP/WAMP)
+1. Download or clone this repo.  
+   ```bash
+   git clone https://github.com/itsme-angeloo/merchandise-onlineshop.git
