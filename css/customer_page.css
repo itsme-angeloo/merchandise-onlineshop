@@ -1,0 +1,829 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root{
+    --primary-bg-color: #121212;
+    --secondary-color: #D9D9D9;
+    --primary-text-color: #ffffff;
+    --secondar-text-color: #414141;
+    --compliment-color: #0099FF;
+    --product_card_color: #1E1E1E;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*outline: 1px dashed var(--secondary-color);*/
+    color: var(--primary-text-color);
+    font-family: "Fira Code", monospace;
+}
+
+body{
+    width: 100%;
+    height: auto;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-page{
+    width: 100%;
+    height: auto;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: var(--primary-text-color);
+    background: var(--primary-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-page .main-top{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5em;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.main-top .top-section{
+    width: auto;
+    height: auto;
+}
+
+.top-section p{
+    font-size: 0.7em;
+}
+
+.main-top .top-info-section{
+    width: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.top-section img{
+    width: 1.2em;
+    cursor: pointer;
+}
+
+.main-page .main-header{
+    width: 100%;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 5em;
+    gap: 1em;
+}
+
+.main-header .header-side{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.main-header .header-section{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.header-section p{
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.main-header .header-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding:0 0 0 0;
+    gap: 0;
+}
+
+.header-section input{
+    width: 20em;
+    height: 2.9em;
+    color: var(--secondary-color);
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+}
+
+.header-section img{
+    width: 1.5em;
+}
+
+.header-section .search-img{
+    position: relative;
+    left: -2.5em;
+}
+
+.account-btn{
+    position: relative;
+    display: inline-block;
+}
+
+.account-btn .my-account-btn{
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.account-btn .logout-dropdown{
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    background-color: var(--product_card_color);
+    min-width: 130px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.logout-dropdown a {
+    color: var(--primary-text-color);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.logout-dropdown a:hover {
+    background-color: var(--compliment-color);
+}
+
+.account-btn:hover .logout-dropdown {
+    display: block;
+    border-radius: 5px;
+}
+
+.account-btn:hover .my-account-btn {
+    background-color: transparent; /* Darker Yellow on hover */
+}
+
+.main-page .product-page{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+}
+.product-page .nav-bar{
+    width: 100%;
+    height: 3.2em;
+    background: var(--primary-text-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5em;
+}
+
+.nav-bar .nav-list{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+    gap:0.5em;
+    border-left: 1px solid var(--secondar-text-color);
+}
+
+.nav-list a{
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--secondar-text-color);
+    font-style: none;
+    text-decoration: none;
+}
+
+.nav-bar .active-category{
+    background: var(--compliment-color);
+}
+
+.active-category a{
+    color: var(--primary-text-color);
+}
+
+.nav-list img{
+    width: 1.5em;
+}
+
+.product-page .product-section{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1em 5em;
+}
+
+.product-section .proleft{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-base-color: var(--compliment-color);
+    padding-right: 0.5em;
+}
+
+.proleft .product-card{
+    width: 100%;
+    height: auto;
+    background: var(--product_card_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5em;
+    padding: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0.3em;
+}
+
+.product-card h2{
+    font-size: 1em;
+    height: 2.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card p{
+    color: var(--secondary-color);
+    font-size: 0.7em;
+}
+
+.product-card .price-value{
+    color: var(--primary-text-color);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.product-card .add-cart-btn{
+    all: unset;
+    width: 100%;
+    background: var(--compliment-color);
+    padding: 0.5em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7em;
+    cursor: pointer;
+    border-radius: 0.2em;
+}
+
+.add-cart-btn p{
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.add-cart-btn:hover{
+    background: #11a0ff;
+}
+
+.add-cart-btn img{
+    width: 1.3em;
+}
+
+
+.product-card .product_img{
+    width: 100%;
+    height: 182px;
+}
+
+.product-section .proright{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    gap: 1em;
+}
+
+/* PRODUCT SIDE POP UP STYLING*/
+
+.proright .pro-add-sidepop{
+    width: 22%;
+    height: auto;
+    background-color: var(--product_card_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    right: 0;
+    border-top-left-radius:1em;
+    border-bottom-left-radius: 1em;
+}
+.pro-add-sidepop .input-merch-details{
+    width: 100%;
+    height: 50%;
+    padding: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.proright .pro-add-sidepop.open{
+    display: flex;
+}
+
+.pro-add-sidepop p, .size-selector, .quantity-control{
+    font-size: 0.7em;
+    width: 100%;
+}
+
+.pro-add-sidepop h1{
+    font-size: 1.3em;
+    text-align: left;
+}
+
+.pro-add-sidepop .pop-description{
+    font-size: 0.8em;
+}
+
+.pro-add-sidepop .size{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.size .size-name{
+    font-size: 1em;
+}
+
+.size .size-selector{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.1em;
+}
+
+.size-selector .size-box{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 14px;
+    user-select: none;
+    transition: 0.2s;
+}
+
+.size-box input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.size-box span {
+    padding: 0.2em 0.5em;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid var(--primary-text-color);
+}
+
+.size-box input:checked + span{
+    background-color: var(--secondary-color);
+    color: var(--product_card_color);
+}
+
+.pro-add-sidepop .quantity-control{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:0.8em;
+}
+
+.pro-add-sidepop .quantity-control p{
+    width: auto;
+    font-size: 1.3em;
+}
+
+.pro-add-sidepop .quantity-control .quantity-name{
+    text-align:left;
+    padding: 0;
+}
+
+.quantity-control #minus-quantity, #plus-quantity{
+    padding: 0 0.5em;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.1em;
+    cursor: pointer;
+}
+
+.pro-add-sidepop .product-img{
+    width: 100%;
+    height: 21em;
+}
+.pro-add-sidepop .add-merch-btn{
+    width: 100%;
+    height: auto;
+}
+
+.add-merch-btn button{
+    all: unset;
+    width: 100%;
+    background: var(--compliment-color);
+    padding: 0.8em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7em;
+    cursor: pointer;
+    border-radius: 0.2em;
+}
+
+.add-merch-btn button img{
+    width: 1.3em;
+}
+.add-merch-btn button p{
+    width: auto;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.proright .proright-img1, .proright-img2{
+    width: 90%;
+}
+
+.main-page footer{
+    width: 100%;
+    height: auto;
+}
+
+footer .newsletter-section{
+    width: 100%;
+    height: auto;
+    background: var(--product_card_color);
+    padding: 1.5em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    border-bottom: 1px solid var(--primary-text-color);
+}
+
+.newsletter-section form{
+    width: auto;
+    height: auto;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.newsletter-section form input{
+    width: 25em;
+    height: 3em;
+    border: 1px solid var(--compliment-color);
+    border-radius: 0.5em;
+    background: transparent;
+    padding: 0.5em 1em;
+    color: var(--primary-text-color);
+    text-align: center;
+}
+
+.newsletter-section form button{
+    all: unset;
+    width: auto;
+    height: auto;
+    padding: 0.6em 2em;
+    background: var(--compliment-color);
+    border-radius: 0.3em;
+    font-size: smaller;
+    cursor: pointer;
+}
+
+footer .main-footer{
+    width: 100%;
+    height: auto;
+    background: var(--product_card_color);
+    padding: 2em 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6em;
+}
+
+.main-footer .main-footer-sections{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.main-footer-sections p{
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.main-footer .sec-1{
+    gap: 1em;
+}
+
+.main-footer .sec-1 h1{
+    font-size: 1.5em;
+}
+
+.main-footer .sec-1 h4{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+
+.main-footer .sec-1 p{
+    font-size: 0.8em;
+    width: 25em;
+}
+
+.main-footer .sec-1 .soc-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.sec-1 .soc-icons img{
+    width: 2em;
+    cursor: pointer;
+}
+
+.main-footer .sec-4 .payment-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.sec-4 .payment-icons img{
+    width: 3em;
+    cursor: pointer;
+}
+
+footer .copyright-section{
+    width: 100%;
+    height: auto;
+    background: var(--primary-bg-color);
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1em 0;
+}
+
+
+/* SET ADDRESS STYLING */
+
+.main-page .set-address{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left: 0;
+    background:#1e1e1e7b;
+    z-index: 20;
+}
+
+.set-address.open{
+    display: flex;
+}
+
+.set-address form{
+    width: 50%;
+    height: 80%;
+    background: var(--product_card_color);
+    border-radius: 1em;
+    border: 1px solid var(--secondary-color);
+    padding: 2em 3em;
+}
+
+.set-address form .set-address-header{
+    width: 100%;
+    height: auto;
+    font-size: 0.8em;
+    font-weight: 100;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.set-address-header img{
+    width: 1.7em;
+    cursor: pointer;
+}
+
+.set-address form .address-info-input{
+    width: 100%;
+    height: auto;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.address-info-input .info-input{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.info-input .inputs{
+    width: 100%;
+    height: auto;
+    padding: 0.5em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.6em;
+}
+
+.inputs label{
+    font-size: 0.8em;
+}
+
+.inputs input{
+    width: 100%;
+    height: 3.3em;
+    background: transparent;
+    color: var(--secondary-color);
+    border-radius: 0.3em;
+    border: 1px solid var(--secondar-text-color);
+    padding: 0.3em 1em;
+}
+
+.info-input .province-code-inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7em;
+}
+
+.province-code-inputs .region-input, .code-input{
+    width: 50%;
+    height: auto;
+}
+
+.info-input-right textarea{
+    width: 100%;
+    height: 10em;
+    background: transparent;
+    color: var(--secondary-color);
+    border-radius: 0.3em;
+    border: 1px solid var(--secondar-text-color);
+    padding: 0.3em 1em;
+}
+
+.info-input-right button{
+    all: unset;
+    width: 100%;
+    font-size: 0.8em;
+    height: 3em;
+    text-align: center;
+    background: var(--compliment-color);
+    color: var(--primary-text-color);
+    border-radius: 0.2em;
+    font-weight: 500;
+}
+
+/* HELP POP UP */
+.help-center-popup{
+    width: 100%;
+    height: 100%;
+    background: #1e1e1ea6;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    z-index: 100;
+}
+
+.help-center-popup .popup-page{
+    width: 40%;
+    height: 90%;
+    border-radius: 0.7em;
+    background: var(--product_card_color);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup-page .page-sec{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--secondar-text-color);
+}
+
+.page-sec h1{
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.page-sec p{
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.page-sec ol, ul{
+    padding-left: 2em;
+}
+
+.popup-page .close-popup{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--compliment-color);
+    color: var(--primary-text-color);
+    padding: 1em;
+    cursor: pointer;
+}

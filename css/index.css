@@ -1,0 +1,1050 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+:root{
+    --primary-bg-color: #121212;
+    --secondary-color: #D9D9D9;
+    --primary-text-color: #ffffff;
+    --secondar-text-color: #414141;
+    --compliment-color: #0099FF;
+    --product_card_color: #1E1E1E;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: var(--primary-text-color);
+    /*outline: 1px dashed var(--primary-text-color);*/
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+.home-primary-sec{
+    width: 100%;
+    height: auto;
+    background: var(--primary-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.home-primary-sec .wave{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+}
+
+.header{
+    width: 90%;
+    height: 4em;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 0;
+    z-index: 10;
+}
+
+.header-btns{
+    width: 30%;
+    height: 100%;
+}
+
+.header-btn1{
+    padding: 0 1em;
+}
+
+.header-btn2{
+    padding: 0.3em;
+    display: grid;
+    place-content: center;
+    color: var(--primary-text-color);
+}
+
+.header-btn2 h1{
+    cursor: pointer;
+}
+
+.header-btn3{
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 0.6em;
+}
+
+.header-btn3 img{
+    width: 1.2em;
+}
+
+.header-btn3 p{
+    cursor: pointer;
+}
+
+.header-btn3 .faqs-btn{
+    width: auto;
+    height: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em;
+}
+
+.nav-bar{
+    width: 100%;
+    height: 5.3em;
+    position: fixed;
+    top: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5em;
+    z-index: 10;
+}
+
+.bar{
+    width: 30%;
+}
+
+.nav-bar .nav-area{
+    width: auto;
+    height: 100%;
+    
+}
+
+.nav-area{
+    width: auto;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.nav-area ul{
+    width: auto;
+    height: auto;
+    font-family: "Fira Code", monospace;
+    font-size: 0.8em;
+    font-style: normal;
+    background: var(--product_card_color);
+    color: var(--primary-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    padding: 0.8em 3em;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-area ul a {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: var(--primary-text-color);
+  text-decoration: none; /* remove default underline */
+}
+
+.nav-area ul a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: var(--secondary-color) ; /* underline color */
+  transition: width 0.3s ease;
+}
+
+.nav-area ul a:hover::after {
+  width: 100%;
+}
+
+.nav-bar .cart{
+    height: 100%;
+    font-family: "Fira Code", monospace;
+    color: var(--primary-text-color);
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center; 
+    gap: 0.6em;
+}
+
+.cart .log-btn{
+    width: auto;
+    height: 2em;
+    background: var(--compliment-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7em;
+    padding:1.2em 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.cart a{
+    font-family: "Fira Code", monospace;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
+
+.log-btn img{
+    width: 1.5em;
+}
+
+
+.cart .cart-btn{
+    width: auto;
+    height: 2em;
+    font-family: "Fira Code", monospace;
+    font-size: 0.8em;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+.cart-btn p{
+    font-size: 0.8em;
+}
+
+.cart-btn img{
+    width: 1.5em;
+    cursor: pointer;
+}
+
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.search-bar .search{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search img{
+    width: 1.5em;
+    position: relative;
+    left: -40px;
+    opacity: 0.7;
+}
+
+.search input{
+    width: 100%;
+    height: auto;
+    color: var(--primary-text-color);
+    background: var(--primary-bg-color);
+    border: 1px solid var(--secondary-color);
+    padding: 0.8em;
+    border-radius: 0.4em;
+}
+
+.primary-sec-lp{
+    width: 100%;
+    height: auto;
+    padding-top: 1.5em;
+    margin-top: 8em;
+    z-index: 5;
+    padding: 1.5em 5em 0 5em;
+}
+
+.primary-sec-lp .glass-card{
+    width: 100%;
+    height: 35em;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);    /* background blur */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 2em 1.5em;
+    transform: translateY(-40px);
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.glass-card .r-con, .l-con{
+    width: 33%;
+    height: 100%;
+}
+
+.glass-card .l-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.l-con .center-text{
+    width: 100%;
+    height: 13em;
+    border-left: 2px solid var(--primary-text-color);
+}
+
+.l-con p{
+    font-family: "Fira Code", monospace;
+    color: var(--primary-text-color);
+    font-style: normal;
+    font-size: 1.7em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.glass-card .r-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.r-con .center-text{
+    width: 100%;
+    height: 10em;
+    border-right: 1px solid var(--primary-text-color);
+}
+
+.r-con p{
+    font-family: "Fira Code", monospace;
+    color: var(--primary-text-color);
+    font-style: normal;
+    font-size: 1.7em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: end;
+}
+
+.glass-card .center-con{
+    width: 30%;
+    height: 100%;
+    background: url('../assets/geloverse-hoodie.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.center-con .shopnow-btn{
+    width: 40%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--primary-text-color);
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 0.7em;
+    gap: 0.7em;
+    backdrop-filter: blur(10px);    /* background blur */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5em;
+    cursor: pointer;
+    animation: jump 2s ease-in-out infinite;
+}
+
+.shopnow-btn p{
+    font-weight: 700;
+}
+
+.shopnow-btn img{
+    width: 1.5em;
+}
+
+#merch{
+    margin-top: 1em;
+}
+
+.shop-content{
+    width: 100%;
+    height: auto;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+.shop-content .shop-feature{
+    width: 100%;
+    height: auto;
+    background: var(--compliment-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    padding: 3em 5em;
+    gap: 2em;
+}
+
+.shop-feature .feature-card{
+    width: 33%;
+    height: 8em;
+    background: var(--product_card_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.1em 1.3em;
+    border-radius: 0.5em;
+}
+
+.shop-content .shop-top-merch{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1em 15em 1em 15em;
+    gap: 1.5em;
+}
+
+.shop-top-merch .top-merch-details{
+    width: 60%;
+    height: 35em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.top-merch-details .details-sides{
+    width: 100%;
+    height: 50%;
+    border-radius: 1em;
+}
+
+.top-merch-details .side-1{
+    background: url('../assets/w-ceramic-mug.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+    padding: 0 1em 1.5em 1em;
+}
+
+.top-merch-details .details-sides::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* black with 0.5 opacity */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.details-sides h1,
+.details-sides p {
+    position: relative;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    color: white; /* so it stands out over the dark background */
+    z-index: 1;
+}
+
+.details-sides:hover h1,
+.details-sides:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.details-sides:hover::after{
+    opacity: 1;
+}
+
+.top-merch-details .side-2{
+    background: url('../assets/b-mouse-index.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+    padding: 0 1em 1.5em 1em;
+}
+
+.shop-top-merch .top-merch-image{
+    width: 40%;
+    height: 35em;
+    background: url('../assets/geloverse.hoodie.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+    padding: 0 1em;
+}
+
+.top-merch-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* black with 0.5 opacity */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.top-merch-image h1,
+.top-merch-image p {
+    position: relative;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    color: white; /* so it stands out over the dark background */
+    z-index: 1;
+}
+
+.top-merch-image:hover h1,
+.top-merch-image:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.top-merch-image:hover::after{
+    opacity: 1;
+}
+
+.feature-card p{
+    text-align: center;
+}
+
+.home-primary-sec .about-us{
+    width: 100%;
+    height: 100vh;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.about-us .map-img{
+    width: 100%;
+    height: 60%;
+    background: url('../assets/map.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.about-us .about-texts{
+    width: 100%;
+    height: 40%;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5em;
+    gap: 1.8em;
+}
+
+.about-texts .about-text-sides{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.about-texts .text-sides-2{
+    text-align: right;
+}
+
+.home-primary-sec .contact-us{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 1em 5em;
+}
+
+.contact-us .info-texts{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5em;
+}
+
+.info-texts .contact-sides{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.contact-sides .contact-info{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+    border: 1px solid var(--secondary-color);
+    padding: 0 5em;
+}
+
+.info-texts .send-message{
+    border: 1px solid var(--primary-text-color);
+    padding: 1.5em;
+}
+
+.send-message input{
+    width: 100%;
+    height: 4em;
+    background: transparent;
+    border: 1px solid var(--primary-text-color);
+    padding: 1em;
+}
+
+.send-message textarea{
+    width: 100%;
+    height: 23em;
+    background: transparent;
+    border: 1px solid var(--primary-text-color);
+    padding: 1em;
+}
+
+.send-message button{
+    all: unset;
+    width: 100%;
+    height: 4em;
+    text-align: center;
+    background: var(--secondar-text-color);
+    color: var(--primary-text-color);
+    cursor: pointer;
+}
+
+.help-center-popup{
+    width: 100%;
+    height: 100%;
+    background: #1e1e1ea6;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    z-index: 100;
+}
+
+.help-center-popup .popup-page{
+    width: 40%;
+    height: 90%;
+    border-radius: 0.7em;
+    background: var(--product_card_color);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 2em;
+    border: 1px solid var(--secondary-color);
+}
+
+.popup-page .page-sec{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--secondar-text-color);
+}
+
+.page-sec h1{
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.page-sec p{
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.page-sec ol, ul{
+    padding-left: 2em;
+}
+
+.popup-page .close-popup{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--compliment-color);
+    color: var(--primary-text-color);
+    padding: 1em;
+    cursor: pointer;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* how high it jumps */
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 395px) {
+  /* Your mobile styles here */
+ body {
+    height: 100vh
+ }
+ .home-primary-sec{
+    padding: 0 1em 1em 1em;
+}
+
+ .home-primary-sec .wave{
+    display: none;
+ }
+
+.header{
+    height: 4em;
+    z-index: 10;
+}
+
+.header h1{
+    font-size: 1em;
+}
+
+.faqs-btn p{
+    display: none;
+}
+
+.nav-bar{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 5em;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 0 2em;
+    gap: 0.5em;
+    row-gap: 1em;
+    z-index: 10;
+}
+
+.search-bar{
+    order: 2;
+    width: 100%;
+    padding: 0;
+}
+
+.search-bar .search{
+    width: 100%;
+}
+
+.nav-bar .nav-area{
+    width: 100%;
+    order: 1;
+    grid-column: span 2;
+}
+
+.nav-area ul{
+    gap: 2em;
+    padding: 0.8em 1.7em;
+}
+
+.cart{
+    order: 3;
+    width: 100%;
+}
+
+.primary-sec-lp{
+    width: 100%;
+    height: auto;
+    padding-top: 1.5em;
+    margin-top: 11em;
+    z-index: 8;
+}
+
+ .primary-sec-lp .glass-card{
+    width: 100%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 1;
+    gap: 0.7em;
+ }
+
+ .glass-card p{
+    font-size: 1em;
+ }
+
+ 
+.glass-card .r-con, .l-con{
+    width: 100%;
+    height: auto;
+}
+
+.glass-card .l-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 0.6em;
+}
+
+.l-con .center-text{
+    display: none;
+}
+
+.l-con p{
+    font-family: "Fira Code", monospace;
+    color: var(--primary-text-color);
+    font-style: normal;
+    font-size: 1em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.glass-card .r-con{
+    display: none
+}
+
+.glass-card .center-con{
+    width: 100%;
+    height: 30em;
+    background: url('../assets/geloverse-hoodie.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2em;
+}
+
+.center-con .shopnow-btn{
+    width: 60%;
+}
+
+.shopnow-btn p{
+    font-weight: 500;
+}
+
+}
+
+
+
+/* Footer Styling */
+footer{
+    width: 100%;
+    background: var(--product_card_color);
+}
+
+footer .main-footer{
+    width: 100%;
+    height: auto;
+    color: var(--primary-text-color);
+    background: var(--product_card_color);
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 2em 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6em;
+}
+
+.main-footer .main-footer-sections{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.main-footer-sections p{
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.main-footer .sec-1{
+    gap: 1em;
+}
+
+.main-footer .sec-1 h1{
+    font-size: 1.5em;
+}
+
+.main-footer .sec-1 h4{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+
+.main-footer .sec-1 p{
+    font-size: 0.8em;
+    width: 25em;
+}
+
+.main-footer .sec-1 .soc-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.sec-1 .soc-icons img{
+    width: 2em;
+    cursor: pointer;
+}
+
+.main-footer .sec-4 .payment-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.sec-4 .payment-icons img{
+    width: 3em;
+    cursor: pointer;
+}
+
+footer .copyright-section{
+    width: 100%;
+    height: auto;
+    color: var(--primary-text-color);
+    background: var(--primary-bg-color);
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1em 0;
+}
